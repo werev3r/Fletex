@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proceso de Cotizacion </title>
+    <link rel="stylesheet" href="/css/estilos.css"/>
+    <script src="js/cotizador.js"></script>
+    <script src="js/cotizador1.js"></script>
+</head>
+<body>
+    <h1 class="titulo-cotizacion1">Completa tu Cotización</h1>
+
+
+  <h2 class="titulo-cotizador">Cotización de Envío</h2>
+
+  <div class="contenedor-datos">
+    <div class="titulo-datos">Datos Ingresados Anteriormente</div>
+
+    <div class="dato-1">
+      <strong>Estado de Origen:</strong> <span id="estadoOrigenDisplay"></span>
+    </div>
+    <div class="dato-1">
+      <strong>Sucursal de Origen:</strong> <span id="sucursalOrigenDisplay"></span>
+    </div>
+    <div class="dato-1">
+      <strong>Estado de Destino:</strong> <span id="estadoDestinoDisplay"></span>
+    </div>
+    <div class="dato-1">
+      <strong>Sucursal de Destino:</strong> <span id="sucursalDestinoDisplay"></span>
+    </div>
+  </div>
+  <form onsubmit="submitForm(event)">
+    <h3 class="detalle-carga">Detalles de la Carga</h3>
+
+     <div id="tablesContainer"></div>
+     <button class="agregar-carga" type="button" onclick="addTable()">Agregar Carga</button>
+        <div class="contenedor-datos-envio">
+            <h4 class="titulo-radio">Tipo de Envío</h4>
+                    <label><input class="radio-tipo" type="radio" name="tipoEnvio" value="domicilio" required> Domicilio</label><br>
+                    <label><input class="radio-tipo" type="radio" name="tipoEnvio" value="recoger" required> Recoger en punto de distribución</label><br>
+                    <label><input class="radio-tipo" type="radio" name="tipoEnvio" value="quimico" required> Producto Químico</label>
+        </div>
+        <div class="container-cotizacion1">
+                    <h4 class="convenio">Número de Convenio</h4>
+                    <input type="text" name="numeroConvenio">
+
+                    <h4 class="valor-carga">Valor Declarado de la Carga</h4>
+                    <input type="number" name="valorDeclarado" required>
+
+                    <h4 class="seguro-carga">Seguro de Carga</h4>
+                    <div class="checkbox-container">
+                     <label><input type="checkbox" name="seguroCarga"> Sí</label>
+                </div>
+
+                <div>
+                  <button type="button" onclick="window.location.href='cotizador.html'">Cancelar</button>
+                  <button type="submit" onclick="window.location.href='resumencotizacion.html'">Cotizar Envío</button>
+        </div>
+        
+  </form>
+
+
+</body>
+</html>
+
+</body>
+</html>
